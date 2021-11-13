@@ -22,16 +22,3 @@ image_gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY)
 plt.imshow(image_gray, cmap='gray')
 plt.axis("off")
 plt.show()
-
-
-image_10x10 = cv2.resize(image_gray, (100,100))
-plt.imshow(image_10x10, cmap='gray')
-plt.axis("off")
-plt.show()
-a = []
-for i in image_10x10.flatten():
-    if len(a) == 50:
-        print(*a)
-        a = [i]
-    else:
-        a.append(i)
